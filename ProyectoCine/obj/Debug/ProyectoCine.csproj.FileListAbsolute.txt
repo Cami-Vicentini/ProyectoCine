@@ -1,0 +1,10 @@
+C:\Users\aguss\OneDrive\Escritorio\ProyectoCine\ProyectoCine\bin\Debug\ProyectoCine.exe.config
+C:\Users\aguss\OneDrive\Escritorio\ProyectoCine\ProyectoCine\bin\Debug\ProyectoCine.exe
+C:\Users\aguss\OneDrive\Escritorio\ProyectoCine\ProyectoCine\bin\Debug\ProyectoCine.pdb
+C:\Users\aguss\OneDrive\Escritorio\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.csproj.AssemblyReference.cache
+C:\Users\aguss\OneDrive\Escritorio\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.Properties.Resources.resources
+C:\Users\aguss\OneDrive\Escritorio\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.csproj.GenerateResource.cache
+C:\Users\aguss\OneDrive\Escritorio\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.csproj.CoreCompileInputs.cache
+C:\Users\aguss\OneDrive\Escritorio\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.exe
+C:\Users\aguss\OneDrive\Escritorio\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.pdb
+C:\Users\aguss\OneDrive\Escritorio\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.Vistas.FrmPrincipal.resources
