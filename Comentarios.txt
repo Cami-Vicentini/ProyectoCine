@@ -1,3 +1,8 @@
 Enumeraciones para: - Tipo Sala
 		    - Tipo Cliente
 		    - Forma Pago
+
+FuncionesDao:
+	- Carga combo con las peliculas disponibles (agregar bool de activo/fecha de baja en tabla Peliculas)
+	- Trae funciones enviando por parametro la pelicula seleccionada en el combo
+	- SalaId: puede traer las butacas de cada sala
