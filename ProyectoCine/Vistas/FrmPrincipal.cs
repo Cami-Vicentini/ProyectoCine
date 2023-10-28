@@ -37,5 +37,21 @@ namespace ProyectoCine.Vistas
                 dgvFunciones.Rows.Add(new object[] { f.oPelicula.Titulo, f.oSala.IdSala, f.oSala.TipoSala, f.Dia, f.Hora, "Comprar" });
             }
         }
+
+        private void dgvFunciones_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dgvFunciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvFunciones.CurrentCell.ColumnIndex == 5)
+            {
+                int id_sala = Convert.ToInt32(dgvFunciones.Rows[e.RowIndex].Cells["ColSala"].Value);
+                FrmButacas frmButacas = new FrmButacas(id_sala);
+                frmButacas.ShowDialog();
+
+            }
+        }
     }
 }

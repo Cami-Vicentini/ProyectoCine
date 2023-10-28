@@ -2,19 +2,21 @@
 {
     public enum Estado
     {
-        Disponible,
+        Libre,
         Ocupado,
         Reservado
     }
     public class Butaca
     {
         public int NroButaca { get; set; }
+
+        //public string FilaCol { get; set; } ?? Ej: FilaCol: "1-A"
         public Estado Estado { get; set; } //Añadir una enum para que diga cualquiera de las 3 opciones
 
         public Butaca()
         {
             NroButaca = 0;
-            Estado = Estado.Disponible;
+            Estado = Estado.Libre;
         }
 
         public Butaca(int nro, Estado estado)

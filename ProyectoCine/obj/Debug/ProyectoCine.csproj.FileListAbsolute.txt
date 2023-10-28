@@ -8,3 +8,4 @@ C:\Users\aguss\OneDrive\Escritorio\ProyectoCine\ProyectoCine\obj\Debug\ProyectoC
 C:\Users\aguss\OneDrive\Escritorio\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.exe
 C:\Users\aguss\OneDrive\Escritorio\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.pdb
 C:\Users\aguss\OneDrive\Escritorio\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.Vistas.FrmPrincipal.resources
+C:\Users\aguss\OneDrive\Escritorio\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.Vistas.FrmButacas.resources

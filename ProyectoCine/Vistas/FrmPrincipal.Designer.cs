@@ -77,6 +77,8 @@
             this.dgvFunciones.RowTemplate.Height = 24;
             this.dgvFunciones.Size = new System.Drawing.Size(888, 328);
             this.dgvFunciones.TabIndex = 3;
+            this.dgvFunciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFunciones_CellContentClick);
+            this.dgvFunciones.Click += new System.EventHandler(this.dgvFunciones_Click);
             // 
             // ColTitulo
             // 

@@ -10,6 +10,31 @@ namespace ProyectoCine.Datos.Implementacion
 {
     public class FuncionDao : IFuncionDao
     {
+        public List<Butaca> GetButacas(int id_sala)
+        {
+            List<Butaca> lButacas = new List<Butaca>(); 
+            DataTable tabla = HelperDao.GetInstancia().ConsultarConParam("SP_OBTENER_BUTACAS", new Parametro("@id_sala", id_sala));
+            foreach (DataRow fila in tabla.Rows)
+            {
+                Butaca oButaca = new Butaca();
+                oButaca.NroButaca = int.Parse(fila["id_butaca"].ToString());
+                if (fila["estado"].ToString().Equals("Libre"))
+                {
+                    oButaca.Estado = Estado.Libre;
+                }
+                else if (fila["estado"].ToString().Equals("Ocupado"))
+                {
+                    oButaca.Estado = Estado.Ocupado;
+                }
+                else
+                {
+                    oButaca.Estado = Estado.Reservado;
+                }
+                
+            }
+            return lButacas;
+        }
+
         public List<Funcion> GetFunciones(Pelicula pelicula)
         {
             List<Funcion> lFunciones = new List<Funcion>();
@@ -45,6 +70,11 @@ namespace ProyectoCine.Datos.Implementacion
                 lPeliculas.Add(oPelicula);
             }
             return lPeliculas;
+        }
+
+        Butaca[,] IFuncionDao.GetButacas(int id_sala)
+        {
+            throw new NotImplementedException();
         }
     }
 }
