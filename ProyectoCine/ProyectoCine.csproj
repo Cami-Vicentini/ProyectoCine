@@ -68,11 +68,17 @@
     <Compile Include="Vistas\FrmButacas.Designer.cs">
       <DependentUpon>FrmButacas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\FrmPrincipal.cs">
+    <Compile Include="Vistas\FrmFunciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\FrmPrincipal.Designer.cs">
-      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    <Compile Include="Vistas\FrmFunciones.Designer.cs">
+      <DependentUpon>FrmFunciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FrmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmMenuPrincipal.Designer.cs">
+      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -87,8 +93,11 @@
     <EmbeddedResource Include="Vistas\FrmButacas.resx">
       <DependentUpon>FrmButacas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\FrmPrincipal.resx">
-      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\FrmFunciones.resx">
+      <DependentUpon>FrmFunciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmMenuPrincipal.resx">
+      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

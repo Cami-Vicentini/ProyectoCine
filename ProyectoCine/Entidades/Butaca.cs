@@ -24,5 +24,10 @@
             NroButaca = nro;
             Estado = estado;
         }
+
+        public override string ToString()
+        {
+            return NroButaca.ToString();    
+        }
     }
 }

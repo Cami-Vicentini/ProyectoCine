@@ -10,7 +10,7 @@ namespace ProyectoCine.Datos.Interfaz
             _3D
         }
         public int IdSala { get; set; }
-        public Tipo_Sala? TipoSala { get; set; }
+        public string TipoSala { get; set; }
         public List<Butaca> Butacas { get; set; }
         public Sala(int idSala)
         {
@@ -18,7 +18,7 @@ namespace ProyectoCine.Datos.Interfaz
             TipoSala = null;
             Butacas = new List<Butaca>();
         }
-        public Sala(int idSala, Tipo_Sala tipoSala)
+        public Sala(int idSala, string tipoSala)
         {
             IdSala = idSala;
             TipoSala = tipoSala;

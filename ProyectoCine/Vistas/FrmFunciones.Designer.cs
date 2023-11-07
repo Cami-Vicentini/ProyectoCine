@@ -1,6 +1,6 @@
 ﻿namespace ProyectoCine.Vistas
 {
-    partial class FrmPrincipal
+    partial class FrmFunciones
     {
         /// <summary>
         /// Required designer variable.
@@ -37,12 +37,14 @@
             this.ColDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAcciones = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFunciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(423, 76);
+            this.btnBuscar.Location = new System.Drawing.Point(391, 68);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 0;
@@ -53,10 +55,11 @@
             // cboPeliculas
             // 
             this.cboPeliculas.FormattingEnabled = true;
-            this.cboPeliculas.Location = new System.Drawing.Point(96, 75);
+            this.cboPeliculas.Location = new System.Drawing.Point(64, 67);
             this.cboPeliculas.Name = "cboPeliculas";
             this.cboPeliculas.Size = new System.Drawing.Size(321, 24);
             this.cboPeliculas.TabIndex = 1;
+            this.cboPeliculas.SelectedIndexChanged += new System.EventHandler(this.cboPeliculas_SelectedIndexChanged);
             // 
             // dgvFunciones
             // 
@@ -70,12 +73,12 @@
             this.ColDia,
             this.ColHora,
             this.ColAcciones});
-            this.dgvFunciones.Location = new System.Drawing.Point(96, 134);
+            this.dgvFunciones.Location = new System.Drawing.Point(12, 131);
             this.dgvFunciones.Name = "dgvFunciones";
             this.dgvFunciones.ReadOnly = true;
             this.dgvFunciones.RowHeadersWidth = 51;
             this.dgvFunciones.RowTemplate.Height = 24;
-            this.dgvFunciones.Size = new System.Drawing.Size(888, 328);
+            this.dgvFunciones.Size = new System.Drawing.Size(1048, 248);
             this.dgvFunciones.TabIndex = 3;
             this.dgvFunciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFunciones_CellContentClick);
             this.dgvFunciones.Click += new System.EventHandler(this.dgvFunciones_Click);
@@ -128,17 +131,27 @@
             this.ColAcciones.ReadOnly = true;
             this.ColAcciones.Width = 125;
             // 
-            // FrmPrincipal
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(524, 69);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
+            this.numericUpDown1.TabIndex = 4;
+            // 
+            // FrmFunciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1072, 648);
+            this.ClientSize = new System.Drawing.Size(1077, 724);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.dgvFunciones);
             this.Controls.Add(this.cboPeliculas);
             this.Controls.Add(this.btnBuscar);
-            this.Name = "FrmPrincipal";
+            this.Name = "FrmFunciones";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmFunciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFunciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,5 +167,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDia;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColHora;
         private System.Windows.Forms.DataGridViewButtonColumn ColAcciones;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }

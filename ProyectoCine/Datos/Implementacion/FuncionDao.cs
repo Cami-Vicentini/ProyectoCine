@@ -12,25 +12,26 @@ namespace ProyectoCine.Datos.Implementacion
     {
         public List<Butaca> GetButacas(int id_sala)
         {
-            List<Butaca> lButacas = new List<Butaca>(); 
+
+            List<Butaca> lButacas = new List<Butaca>();
             DataTable tabla = HelperDao.GetInstancia().ConsultarConParam("SP_OBTENER_BUTACAS", new Parametro("@id_sala", id_sala));
             foreach (DataRow fila in tabla.Rows)
             {
-                Butaca oButaca = new Butaca();
-                oButaca.NroButaca = int.Parse(fila["id_butaca"].ToString());
-                if (fila["estado"].ToString().Equals("Libre"))
+                Butaca b = new Butaca();
+                b.NroButaca = int.Parse(fila["id_butaca"].ToString());
+                if (fila["estado"].ToString() == "Libre")
                 {
-                    oButaca.Estado = Estado.Libre;
+                    b.Estado = Estado.Libre;
                 }
-                else if (fila["estado"].ToString().Equals("Ocupado"))
+                else if (fila["estado"].ToString() == "Ocupado")
                 {
-                    oButaca.Estado = Estado.Ocupado;
+                    b.Estado = Estado.Ocupado;
                 }
                 else
                 {
-                    oButaca.Estado = Estado.Reservado;
+                    b.Estado = Estado.Reservado;
                 }
-                
+                lButacas.Add(b);
             }
             return lButacas;
         }
@@ -45,9 +46,9 @@ namespace ProyectoCine.Datos.Implementacion
                 Funcion oFuncion = new Funcion(pelicula, idSala);
                 oFuncion.FuncionId = int.Parse(fila["id_funcion"].ToString());
                 DateTime dia = DateTime.Parse(fila["dia"].ToString());
-                oFuncion.Dia = DateTime.Parse(dia.ToString(String.Format("yyyy-MM-dd")));
+                oFuncion.Dia = dia.ToString(String.Format("M"));
                 DateTime hora = DateTime.Parse(fila["hora"].ToString());
-                oFuncion.Hora = DateTime.Parse(dia.ToString(String.Format("HH:mm")));
+                oFuncion.Hora = hora.ToString("t");
                 lFunciones.Add(oFuncion);
             }
             return lFunciones;
@@ -70,11 +71,6 @@ namespace ProyectoCine.Datos.Implementacion
                 lPeliculas.Add(oPelicula);
             }
             return lPeliculas;
-        }
-
-        Butaca[,] IFuncionDao.GetButacas(int id_sala)
-        {
-            throw new NotImplementedException();
         }
     }
 }

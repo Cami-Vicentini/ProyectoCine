@@ -12,8 +12,11 @@ using System.Windows.Forms;
 
 namespace ProyectoCine.Vistas
 {
+    
     public partial class FrmButacas : Form
     {
+
+        private Button botonSeleccionado = null;
         private IFuncionDao servicio;
         private int idSala;
         public FrmButacas(int sala)
@@ -32,7 +35,33 @@ namespace ProyectoCine.Vistas
             {
                 dgvButacas.Rows.Add(new object[] { b.NroButaca, b.Estado });
             }
+
+            Butaca[] arrButacas = lButacas.ToArray();
+
+            for (int i = 0; i < pButacas.Controls.Count; i++)
+            {
+                pButacas.Controls[i].Text = arrButacas[i].ToString();
+                if (arrButacas[i].Estado == Estado.Libre)
+                {
+                    pButacas.Controls[i].BackColor = Color.Green;
+                }
+                pButacas.Controls[i].Click += FrmButacas_Click;
+
+            }
         }
 
+        private void FrmButacas_Click(object sender, EventArgs e)
+        {
+            botonSeleccionado = (Button)sender;
+            if (botonSeleccionado.BackColor == Color.Yellow)
+            {
+                botonSeleccionado.BackColor = Color.Green;
+            }
+            else
+            {
+                botonSeleccionado.BackColor = Color.Yellow;
+            }
+            
+        }
     }
 }
