@@ -9,8 +9,7 @@
     public class Butaca
     {
         public int NroButaca { get; set; }
-
-        //public string FilaCol { get; set; } ?? Ej: FilaCol: "1-A"
+        public string FilaCol { get; set; }
         public Estado Estado { get; set; } //Añadir una enum para que diga cualquiera de las 3 opciones
 
         public Butaca()

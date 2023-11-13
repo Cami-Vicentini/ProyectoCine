@@ -55,11 +55,13 @@
     <Compile Include="Datos\HelperDao.cs" />
     <Compile Include="Datos\Implementacion\FuncionDao.cs" />
     <Compile Include="Entidades\Butaca.cs" />
+    <Compile Include="Entidades\Entrada.cs" />
     <Compile Include="Entidades\Funcion.cs" />
     <Compile Include="Datos\Interfaz\IFuncionDao.cs" />
     <Compile Include="Entidades\Pelicula.cs" />
     <Compile Include="Datos\Parametro.cs" />
     <Compile Include="Entidades\Sala.cs" />
+    <Compile Include="Entidades\Venta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vistas\FrmButacas.cs">
@@ -111,6 +113,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoPochoclo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechaAtras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechaAtras1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

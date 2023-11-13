@@ -68,5 +68,35 @@ namespace ProyectoCine.Properties {
                 return ResourceManager.GetString("CadenaConexion", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaAtras {
+            get {
+                object obj = ResourceManager.GetObject("flechaAtras", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaAtras1 {
+            get {
+                object obj = ResourceManager.GetObject("flechaAtras1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FondoPochoclo {
+            get {
+                object obj = ResourceManager.GetObject("FondoPochoclo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -10,6 +10,7 @@ namespace ProyectoCine.Datos.Interfaz
     {
         List<Funcion> GetFunciones(Pelicula id_pelicula);//Devuelve las funciones según la película enviada por parametro
         List<Pelicula> GetPeliculas(); //Mapea peliculas para cargar el combo
-        List<Butaca> GetButacas(int id_sala); //Devuelve una lista de las butacas de una sala en especifico
+        List<Butaca> GetButacas(Funcion funcion); //Trae lista de butacas de la sala ingresada por parametro
+        bool ButacasDisponibles(Funcion funcion, int cantidad);
     }
 }

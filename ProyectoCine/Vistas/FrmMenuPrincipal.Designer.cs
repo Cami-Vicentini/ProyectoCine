@@ -66,7 +66,7 @@
             // verFuncionesToolStripMenuItem
             // 
             this.verFuncionesToolStripMenuItem.Name = "verFuncionesToolStripMenuItem";
-            this.verFuncionesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.verFuncionesToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.verFuncionesToolStripMenuItem.Text = "Ver funciones";
             this.verFuncionesToolStripMenuItem.Click += new System.EventHandler(this.verFuncionesToolStripMenuItem_Click);
             // 
@@ -110,7 +110,7 @@
             this.ClientSize = new System.Drawing.Size(1007, 578);
             this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMenuPrincipal";
             this.Text = "FrmMenuPrincipal";

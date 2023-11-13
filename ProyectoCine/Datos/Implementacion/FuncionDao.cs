@@ -10,29 +10,48 @@ namespace ProyectoCine.Datos.Implementacion
 {
     public class FuncionDao : IFuncionDao
     {
-        public List<Butaca> GetButacas(int id_sala)
+        public bool ButacasDisponibles(Funcion funcion, int cantidad)
+        {
+            bool verificacion = true;
+            DataTable tabla = HelperDao.GetInstancia().ConsultarConParam("SP_ESTADOS_BUTACA", new Parametro("@funcion", funcion.FuncionId));
+            int cantDisponible = 48 - tabla.Rows.Count; 
+            if (cantidad > cantDisponible)
+            {
+                verificacion = false;
+            }
+            return verificacion;
+        }
+
+        public List<Butaca> GetButacas(Funcion funcion)
         {
 
             List<Butaca> lButacas = new List<Butaca>();
-            DataTable tabla = HelperDao.GetInstancia().ConsultarConParam("SP_OBTENER_BUTACAS", new Parametro("@id_sala", id_sala));
-            foreach (DataRow fila in tabla.Rows)
+            DataTable tablaButacas = HelperDao.GetInstancia().ConsultarConParam("SP_OBTENER_BUTACAS", new Parametro("@id_sala", funcion.oSala.IdSala));
+            DataTable tablaEstados = HelperDao.GetInstancia().ConsultarConParam("SP_ESTADOS_BUTACA", new Parametro("@funcion", funcion.FuncionId));
+            foreach (DataRow fila in tablaButacas.Rows)
             {
                 Butaca b = new Butaca();
                 b.NroButaca = int.Parse(fila["id_butaca"].ToString());
-                if (fila["estado"].ToString() == "Libre")
+                b.FilaCol = fila["numero"].ToString();
+                if (tablaEstados.Rows.Count > 0)
                 {
-                    b.Estado = Estado.Libre;
-                }
-                else if (fila["estado"].ToString() == "Ocupado")
-                {
-                    b.Estado = Estado.Ocupado;
+                    foreach (DataRow filaEstados in tablaEstados.Rows)
+                    {
+                        if (b.NroButaca == int.Parse(filaEstados["id_butaca"].ToString()))
+                        {
+                            b.Estado = Estado.Ocupado;
+                        }
+                    }
                 }
                 else
                 {
-                    b.Estado = Estado.Reservado;
+                    b.Estado = Estado.Libre;
                 }
                 lButacas.Add(b);
             }
+
+            
+
             return lButacas;
         }
 
@@ -42,8 +61,8 @@ namespace ProyectoCine.Datos.Implementacion
             DataTable tabla = HelperDao.GetInstancia().ConsultarConParam("SP_OBTENER_FUNCIONES", new Parametro("@id_pelicula", pelicula.IdPelicula));
             foreach (DataRow fila in tabla.Rows)
             {
-                int idSala = int.Parse(fila["id_sala"].ToString());
-                Funcion oFuncion = new Funcion(pelicula, idSala);
+                Sala oSala = new Sala(int.Parse(fila["id_sala"].ToString()), fila["descripcion"].ToString());
+                Funcion oFuncion = new Funcion(pelicula, oSala);
                 oFuncion.FuncionId = int.Parse(fila["id_funcion"].ToString());
                 DateTime dia = DateTime.Parse(fila["dia"].ToString());
                 oFuncion.Dia = dia.ToString(String.Format("M"));

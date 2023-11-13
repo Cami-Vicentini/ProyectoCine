@@ -1,5 +1,6 @@
 ﻿using ProyectoCine.Datos.Implementacion;
 using ProyectoCine.Datos.Interfaz;
+using ProyectoCine.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,11 +15,14 @@ namespace ProyectoCine.Vistas
 {
     public partial class FrmFunciones : Form
     {
-        IFuncionDao servicio = null;
+        private Venta nuevaVenta;
+        private List<Funcion> lFunciones;
+        private IFuncionDao servicio = null;
         public FrmFunciones()
         {
             InitializeComponent();
             servicio = new FuncionDao();
+            lFunciones = new List<Funcion>();
         }
 
         private void CargarPeliculas()
@@ -27,40 +31,42 @@ namespace ProyectoCine.Vistas
             cboPeliculas.ValueMember = "IdPelicula";
             cboPeliculas.DisplayMember = "Titulo";
             cboPeliculas.SelectedValue = -1;
-            cboPeliculas.DropDownStyle = ComboBoxStyle.DropDownList;    
+            cboPeliculas.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void dgvFunciones_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void dgvFunciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvFunciones.CurrentCell.ColumnIndex == 5)
             {
-                int id_sala = Convert.ToInt32(dgvFunciones.Rows[e.RowIndex].Cells["ColSala"].Value);
-                FrmButacas frmButacas = new FrmButacas(id_sala);
-                frmButacas.ShowDialog();
+                if (servicio.ButacasDisponibles(lFunciones[dgvFunciones.CurrentRow.Index], int.Parse(nudCantidad.Value.ToString())))
+                {
+                    FrmButacas frmButacas = new FrmButacas(lFunciones[dgvFunciones.CurrentRow.Index]);
+                    frmButacas.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("la cantidad de entradas es inválida!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    nudCantidad.Value = 1;
+                }
             }
         }
 
         private void cboPeliculas_SelectedIndexChanged(object sender, EventArgs e)
         {
+            dgvFunciones.Rows.Clear();
             if (cboPeliculas.SelectedIndex > -1)
             {
-                List<Funcion> lFunciones = servicio.GetFunciones((Pelicula)cboPeliculas.Items[cboPeliculas.SelectedIndex]);
+                lFunciones.Clear();
+                lFunciones = servicio.GetFunciones((Pelicula)cboPeliculas.Items[cboPeliculas.SelectedIndex]);
+                
 
                 dgvFunciones.Rows.Clear();
                 foreach (Funcion f in lFunciones)
                 {
                     dgvFunciones.Rows.Add(new object[] { f.oPelicula.Titulo, f.oSala.IdSala, f.oSala.TipoSala, f.Dia, f.Hora, "Comprar" });
                 }
+                dgvFunciones.ClearSelection();
             }
         }
 
@@ -68,5 +74,6 @@ namespace ProyectoCine.Vistas
         {
             CargarPeliculas();
         }
+
     }
 }
