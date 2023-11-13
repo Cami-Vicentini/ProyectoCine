@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoCine.Vistas
 {
-    public partial class Login : Form
+    public partial class FrmLogin : Form
     {
-        public Login()
+        public FrmLogin()
         {
             InitializeComponent();
         }
