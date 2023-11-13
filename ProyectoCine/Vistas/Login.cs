@@ -16,5 +16,30 @@ namespace ProyectoCine.Vistas
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            //validar
+        }
+
+        private void picCerrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Cerrar el programa?", "Cerrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void picBoxOcultar_Click(object sender, EventArgs e)
+        {
+            picBoxMostrar.BringToFront();
+            txtContraseña.UseSystemPasswordChar = true;
+        }
+
+        private void picBoxMostrar_Click(object sender, EventArgs e)
+        {
+            picBoxOcultar.BringToFront();
+            txtContraseña.UseSystemPasswordChar = false;
+        }
     }
 }
