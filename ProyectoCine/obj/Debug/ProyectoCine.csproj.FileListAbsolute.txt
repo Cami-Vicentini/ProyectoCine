@@ -22,3 +22,6 @@ C:\Users\Jeanp\OneDrive\Escritorio\Proyecto cine\ProyectoCine\ProyectoCine\obj\D
 C:\Users\Jeanp\OneDrive\Escritorio\Proyecto cine\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.csproj.CoreCompileInputs.cache
 C:\Users\Jeanp\OneDrive\Escritorio\Proyecto cine\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.exe
 C:\Users\Jeanp\OneDrive\Escritorio\Proyecto cine\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.pdb
+C:\Users\Jeanp\OneDrive\Escritorio\Proyecto cine\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.Vistas.FrmLogin.resources
+C:\Users\Jeanp\OneDrive\Escritorio\Proyecto cine\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.Vistas.FrmMenu.resources
+C:\Users\Jeanp\OneDrive\Escritorio\Proyecto cine\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.Vistas.FrmAcercaDe.resources

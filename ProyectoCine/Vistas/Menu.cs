@@ -87,8 +87,8 @@ namespace ProyectoCine.Vistas
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            //unir formulario
-
+            FrmMensaje mens = new FrmMensaje();
+            mens.Show();
             OcultarSubMenu();
         }
 
@@ -102,8 +102,8 @@ namespace ProyectoCine.Vistas
 
         private void btnAbm_Click(object sender, EventArgs e)
         {
-            //unir formulario
-
+            //Frm.... ... = new ....();
+            //abm.Show();
             OcultarSubMenu();
         }
 
@@ -139,13 +139,23 @@ namespace ProyectoCine.Vistas
         private void btnAcercaDe_Click(object sender, EventArgs e)
         {
             MostrarSubMenu(panelAcercaDe);
+            
         }
 
         private void btnIntegrantes_Click(object sender, EventArgs e)
         {
             //unir formulario
             OcultarSubMenu();
+            FrmAcercaDe acer = new FrmAcercaDe();
+            acer.Show();
         }
 
+        private void picMinim_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                WindowState = FormWindowState.Minimized;
+            else if (WindowState == FormWindowState.Maximized)
+                WindowState = FormWindowState.Minimized;
+        }
     }
 }

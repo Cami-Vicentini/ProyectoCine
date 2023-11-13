@@ -395,6 +395,7 @@
             // picCerrar
             // 
             this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picCerrar.Image")));
             this.picCerrar.Location = new System.Drawing.Point(961, 5);
             this.picCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -420,6 +421,7 @@
             // picMinim
             // 
             this.picMinim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picMinim.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinim.Image = ((System.Drawing.Image)(resources.GetObject("picMinim.Image")));
             this.picMinim.Location = new System.Drawing.Point(835, 5);
             this.picMinim.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -428,6 +430,7 @@
             this.picMinim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picMinim.TabIndex = 75;
             this.picMinim.TabStop = false;
+            this.picMinim.Click += new System.EventHandler(this.picMinim_Click);
             // 
             // pnlTop
             // 
@@ -460,6 +463,7 @@
             this.Controls.Add(this.pictureBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.panelArchivo.ResumeLayout(false);
             this.panelSoporte.ResumeLayout(false);

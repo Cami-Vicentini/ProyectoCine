@@ -118,5 +118,9 @@ namespace ProyectoCine.Vistas
             pButacas.Controls.AddRange(listaBotones.ToArray());
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

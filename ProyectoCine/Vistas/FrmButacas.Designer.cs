@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmButacas));
             this.pButacas = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button48 = new System.Windows.Forms.Button();
             this.button47 = new System.Windows.Forms.Button();
             this.button46 = new System.Windows.Forms.Button();
@@ -80,16 +82,27 @@
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblSubtotal = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dgvButacasSeleccionadas = new System.Windows.Forms.DataGridView();
             this.ColNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelSubTotal = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.picCerrar = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pButacas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvButacasSeleccionadas)).BeginInit();
+            this.panelSubTotal.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pButacas
@@ -143,10 +156,21 @@
             this.pButacas.Controls.Add(this.button20);
             this.pButacas.Controls.Add(this.button12);
             this.pButacas.Controls.Add(this.button4);
-            this.pButacas.Location = new System.Drawing.Point(70, 97);
+            this.pButacas.Controls.Add(this.pictureBox3);
+            this.pButacas.Location = new System.Drawing.Point(32, 219);
             this.pButacas.Name = "pButacas";
             this.pButacas.Size = new System.Drawing.Size(550, 386);
             this.pButacas.TabIndex = 1;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(257, 42);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(52, 53);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 47;
+            this.pictureBox3.TabStop = false;
             // 
             // button48
             // 
@@ -211,20 +235,22 @@
             // button5
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(330, 26);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(48, 48);
             this.button5.TabIndex = 4;
             this.button5.Text = "5";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(381, 26);
+            this.button6.Location = new System.Drawing.Point(382, 26);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(48, 48);
             this.button6.TabIndex = 5;
@@ -725,21 +751,30 @@
             this.button4.Text = "4";
             this.button4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(491, 588);
+            this.btnConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(67)))), ((int)(((byte)(53)))));
+            this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnConfirmar.Location = new System.Drawing.Point(573, 639);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(129, 41);
+            this.btnConfirmar.Size = new System.Drawing.Size(191, 50);
             this.btnConfirmar.TabIndex = 2;
             this.btnConfirmar.Text = "Confirmar Compra";
             this.btnConfirmar.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(70, 588);
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(67)))), ((int)(((byte)(53)))));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.Location = new System.Drawing.Point(289, 639);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(129, 41);
+            this.btnCancelar.Size = new System.Drawing.Size(191, 50);
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar Compra";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -748,41 +783,20 @@
             // 
             this.lblSubtotal.AutoSize = true;
             this.lblSubtotal.BackColor = System.Drawing.Color.Black;
-            this.lblSubtotal.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             this.lblSubtotal.ForeColor = System.Drawing.Color.White;
-            this.lblSubtotal.Location = new System.Drawing.Point(831, 425);
+            this.lblSubtotal.Location = new System.Drawing.Point(134, 390);
             this.lblSubtotal.Name = "lblSubtotal";
-            this.lblSubtotal.Size = new System.Drawing.Size(113, 30);
+            this.lblSubtotal.Size = new System.Drawing.Size(164, 38);
             this.lblSubtotal.TabIndex = 6;
             this.lblSubtotal.Text = "Subtotal: ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Location = new System.Drawing.Point(151, 41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(401, 58);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(289, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 40);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Pantalla";
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Black;
-            this.pictureBox2.Location = new System.Drawing.Point(737, 422);
+            this.pictureBox2.Location = new System.Drawing.Point(54, 361);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(331, 58);
+            this.pictureBox2.Size = new System.Drawing.Size(331, 67);
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
@@ -794,41 +808,120 @@
             this.dgvButacasSeleccionadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColNumero,
             this.ColPrecio});
-            this.dgvButacasSeleccionadas.Location = new System.Drawing.Point(737, 97);
+            this.dgvButacasSeleccionadas.Location = new System.Drawing.Point(54, 42);
             this.dgvButacasSeleccionadas.Name = "dgvButacasSeleccionadas";
             this.dgvButacasSeleccionadas.ReadOnly = true;
-            this.dgvButacasSeleccionadas.Size = new System.Drawing.Size(331, 325);
+            this.dgvButacasSeleccionadas.RowHeadersWidth = 62;
+            this.dgvButacasSeleccionadas.Size = new System.Drawing.Size(331, 344);
             this.dgvButacasSeleccionadas.TabIndex = 10;
             // 
             // ColNumero
             // 
             this.ColNumero.HeaderText = "Numero";
+            this.ColNumero.MinimumWidth = 8;
             this.ColNumero.Name = "ColNumero";
             this.ColNumero.ReadOnly = true;
+            this.ColNumero.Width = 150;
             // 
             // ColPrecio
             // 
             this.ColPrecio.HeaderText = "Precio";
+            this.ColPrecio.MinimumWidth = 8;
             this.ColPrecio.Name = "ColPrecio";
             this.ColPrecio.ReadOnly = true;
+            this.ColPrecio.Width = 150;
+            // 
+            // panelSubTotal
+            // 
+            this.panelSubTotal.Controls.Add(this.dgvButacasSeleccionadas);
+            this.panelSubTotal.Controls.Add(this.lblSubtotal);
+            this.panelSubTotal.Controls.Add(this.pictureBox2);
+            this.panelSubTotal.Location = new System.Drawing.Point(643, 117);
+            this.panelSubTotal.Name = "panelSubTotal";
+            this.panelSubTotal.Size = new System.Drawing.Size(425, 454);
+            this.panelSubTotal.TabIndex = 11;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Location = new System.Drawing.Point(32, 117);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(550, 105);
+            this.panel1.TabIndex = 12;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.DimGray;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(28, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(507, 153);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 8;
+            this.pictureBox4.TabStop = false;
+            // 
+            // picCerrar
+            // 
+            this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picCerrar.Image")));
+            this.picCerrar.Location = new System.Drawing.Point(1022, 14);
+            this.picCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.picCerrar.Name = "picCerrar";
+            this.picCerrar.Size = new System.Drawing.Size(46, 37);
+            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picCerrar.TabIndex = 75;
+            this.picCerrar.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(-23, -4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(354, 99);
+            this.panel2.TabIndex = 76;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(19, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(104, 92);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(136, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(205, 55);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Butacas";
             // 
             // FrmButacas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Maroon;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(109)))), ((int)(((byte)(126)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1080, 642);
-            this.Controls.Add(this.dgvButacasSeleccionadas);
-            this.Controls.Add(this.lblSubtotal);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(1081, 712);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.picCerrar);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelSubTotal);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.pButacas);
-            this.Controls.Add(this.pictureBox2);
             this.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "FrmButacas";
             this.ShowIcon = false;
@@ -836,11 +929,18 @@
             this.Text = "Sala: ";
             this.Load += new System.EventHandler(this.FrmButacas_Load);
             this.pButacas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvButacasSeleccionadas)).EndInit();
+            this.panelSubTotal.ResumeLayout(false);
+            this.panelSubTotal.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -897,11 +997,17 @@
         private System.Windows.Forms.Button button43;
         private System.Windows.Forms.Button button42;
         private System.Windows.Forms.Button button41;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView dgvButacasSeleccionadas;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNumero;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPrecio;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panelSubTotal;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox picCerrar;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
