@@ -76,6 +76,12 @@
     <Compile Include="Vistas\FrmButacas.Designer.cs">
       <DependentUpon>FrmButacas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\FrmCargando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmCargando.Designer.cs">
+      <DependentUpon>FrmCargando.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\FrmFunciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,12 +93,6 @@
     </Compile>
     <Compile Include="Vistas\FrmMensaje.Designer.cs">
       <DependentUpon>FrmMensaje.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\FrmMenuPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\FrmMenuPrincipal.Designer.cs">
-      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Login.cs">
       <SubType>Form</SubType>
@@ -122,14 +122,14 @@
     <EmbeddedResource Include="Vistas\FrmButacas.resx">
       <DependentUpon>FrmButacas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmCargando.resx">
+      <DependentUpon>FrmCargando.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FrmFunciones.resx">
       <DependentUpon>FrmFunciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FrmMensaje.resx">
       <DependentUpon>FrmMensaje.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\FrmMenuPrincipal.resx">
-      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

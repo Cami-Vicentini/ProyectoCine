@@ -85,6 +85,7 @@
             // picCerrar
             // 
             this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picCerrar.Image")));
             this.picCerrar.Location = new System.Drawing.Point(893, 36);
             this.picCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -110,6 +111,7 @@
             // picMinim
             // 
             this.picMinim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picMinim.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinim.Image = ((System.Drawing.Image)(resources.GetObject("picMinim.Image")));
             this.picMinim.Location = new System.Drawing.Point(767, 36);
             this.picMinim.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -118,6 +120,7 @@
             this.picMinim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picMinim.TabIndex = 75;
             this.picMinim.TabStop = false;
+            this.picMinim.Click += new System.EventHandler(this.picMinim_Click);
             // 
             // picBoxOcultar
             // 
@@ -147,15 +150,16 @@
             // 
             this.txtContraseña.Location = new System.Drawing.Point(465, 311);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(229, 26);
+            this.txtContraseña.Size = new System.Drawing.Size(230, 26);
             this.txtContraseña.TabIndex = 82;
             // 
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(465, 198);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(229, 26);
+            this.txtUsuario.Size = new System.Drawing.Size(230, 26);
             this.txtUsuario.TabIndex = 81;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // lblUsuario
             // 
@@ -177,7 +181,7 @@
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
-            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnLogin.Location = new System.Drawing.Point(465, 378);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(214, 76);

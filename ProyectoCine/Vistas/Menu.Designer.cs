@@ -196,6 +196,7 @@
             this.btnPeliculas.Text = "Peliculas";
             this.btnPeliculas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPeliculas.UseVisualStyleBackColor = true;
+            this.btnPeliculas.Click += new System.EventHandler(this.btnPeliculas_Click_1);
             // 
             // btnReportes
             // 
@@ -344,7 +345,7 @@
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(200)))), ((int)(((byte)(199)))));
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(688, 43);
+            this.pictureBox4.Location = new System.Drawing.Point(691, 64);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(504, 713);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -369,7 +370,7 @@
             this.panelLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLateral.Location = new System.Drawing.Point(0, 0);
             this.panelLateral.Name = "panelLateral";
-            this.panelLateral.Size = new System.Drawing.Size(275, 620);
+            this.panelLateral.Size = new System.Drawing.Size(275, 663);
             this.panelLateral.TabIndex = 18;
             // 
             // panelTop
@@ -453,7 +454,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(200)))), ((int)(((byte)(199)))));
-            this.ClientSize = new System.Drawing.Size(1000, 620);
+            this.ClientSize = new System.Drawing.Size(1007, 663);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.Pic);
             this.Controls.Add(this.lblDate);

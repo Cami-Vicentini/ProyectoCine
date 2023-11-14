@@ -41,5 +41,18 @@ namespace ProyectoCine.Vistas
             picBoxOcultar.BringToFront();
             txtContraseña.UseSystemPasswordChar = false;
         }
+
+        private void picMinim_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                WindowState = FormWindowState.Minimized;
+            else if (WindowState == FormWindowState.Maximized)
+                WindowState = FormWindowState.Minimized;
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
