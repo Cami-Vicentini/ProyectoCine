@@ -25,3 +25,6 @@ C:\Users\Jeanp\OneDrive\Escritorio\Proyecto cine\ProyectoCine\ProyectoCine\obj\D
 C:\Users\Jeanp\OneDrive\Escritorio\Proyecto cine\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.Vistas.FrmMenu.resources
 C:\Users\Jeanp\OneDrive\Escritorio\Proyecto cine\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.Vistas.FrmAcercaDe.resources
 C:\Users\Jeanp\OneDrive\Escritorio\Proyecto cine\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.Vistas.FrmMensaje.resources
+C:\Users\Jeanp\OneDrive\Escritorio\Proyecto cine\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.FrmLoginPrincipal.resources
+C:\Users\Jeanp\OneDrive\Escritorio\Proyecto cine\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.Vistas.FrmCargando.resources
+C:\Users\Jeanp\OneDrive\Escritorio\Proyecto cine\ProyectoCine\ProyectoCine\obj\Debug\ProyectoCine.Vistas.FrmPeliculas.resources

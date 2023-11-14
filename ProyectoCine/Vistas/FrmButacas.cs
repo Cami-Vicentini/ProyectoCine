@@ -122,5 +122,10 @@ namespace ProyectoCine.Vistas
         {
 
         }
+
+        private void picCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

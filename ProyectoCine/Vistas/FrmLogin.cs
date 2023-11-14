@@ -19,12 +19,23 @@ namespace ProyectoCine.Vistas
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //validar
+            if (txtUsuario.Text == "Usuario1" && txtContraseña.Text == "12345")
+                IniciarSesion();
+            else
+                MessageBox.Show("No se puede iniciar sesion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+        }
+
+        private void IniciarSesion()
+        {
+            this.Close();
+            FrmMenu menu = new FrmMenu();
+            menu.Show();
         }
 
         private void picCerrar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Cerrar el programa?", "Cerrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Desea cerrar el programa?", "Cerrar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -54,5 +65,19 @@ namespace ProyectoCine.Vistas
         {
 
         }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            Limpieza();
+            txtUsuario.Focus();
+        }
+
+        private void Limpieza()
+        {
+            txtUsuario.Text = string.Empty;
+            txtContraseña.Text = string.Empty;
+
+        }
+    
     }
 }

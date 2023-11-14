@@ -196,7 +196,6 @@
             this.btnPeliculas.Text = "Peliculas";
             this.btnPeliculas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPeliculas.UseVisualStyleBackColor = true;
-            this.btnPeliculas.Click += new System.EventHandler(this.btnPeliculas_Click_1);
             // 
             // btnReportes
             // 
@@ -299,7 +298,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(355, 180);
+            this.pictureBox6.Location = new System.Drawing.Point(281, 228);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(250, 617);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -310,7 +309,7 @@
             // 
             this.Pic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Pic.Image = ((System.Drawing.Image)(resources.GetObject("Pic.Image")));
-            this.Pic.Location = new System.Drawing.Point(300, 569);
+            this.Pic.Location = new System.Drawing.Point(183, 636);
             this.Pic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Pic.Name = "Pic";
             this.Pic.Size = new System.Drawing.Size(48, 37);
@@ -345,7 +344,7 @@
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(200)))), ((int)(((byte)(199)))));
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(691, 64);
+            this.pictureBox4.Location = new System.Drawing.Point(693, 45);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(504, 713);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -357,6 +356,7 @@
             this.panelLateral.AutoScroll = true;
             this.panelLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(92)))), ((int)(((byte)(95)))));
             this.panelLateral.Controls.Add(this.panelAcercaDe);
+            this.panelLateral.Controls.Add(this.Pic);
             this.panelLateral.Controls.Add(this.btnAcercaDe);
             this.panelLateral.Controls.Add(this.panelReportes);
             this.panelLateral.Controls.Add(this.btnReportes);
@@ -370,7 +370,7 @@
             this.panelLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLateral.Location = new System.Drawing.Point(0, 0);
             this.panelLateral.Name = "panelLateral";
-            this.panelLateral.Size = new System.Drawing.Size(275, 663);
+            this.panelLateral.Size = new System.Drawing.Size(275, 673);
             this.panelLateral.TabIndex = 18;
             // 
             // panelTop
@@ -454,9 +454,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(200)))), ((int)(((byte)(199)))));
-            this.ClientSize = new System.Drawing.Size(1007, 663);
+            this.ClientSize = new System.Drawing.Size(1005, 673);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.Pic);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.panelLateral);

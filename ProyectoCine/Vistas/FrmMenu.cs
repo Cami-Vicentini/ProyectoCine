@@ -15,37 +15,15 @@ namespace ProyectoCine.Vistas
     {
         int cont = 0;
         int cont2 = 0;
-
-
         public FrmMenu()
         {
             InitializeComponent();
             PersonalizarDiseño();
         }
 
-        private void reloj_Tick(object sender, EventArgs e)
-        {
-            cont++;
-            cont2++;
-            lblHora.Text = DateTime.Now.ToLongTimeString();
-            lblDate.Text = DateTime.Now.ToString("dddd MMMM yyyy");
-            if (cont == 600)
-            {
-                Pic.Visible = true;
-            }
-        }
-
-        private void picCerrar_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Estás seguro que deseas salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
-
         private void PersonalizarDiseño()
         {
-            //ocultar paneles de menú
+            //ocultar paneles de submenú
             panelArchivo.Visible = false;
             panelSoporte.Visible = false;
             panelTransaccion.Visible = false;
@@ -87,6 +65,7 @@ namespace ProyectoCine.Vistas
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            //unir formulario
             FrmMensaje mens = new FrmMensaje();
             mens.Show();
             OcultarSubMenu();
@@ -102,8 +81,8 @@ namespace ProyectoCine.Vistas
 
         private void btnAbm_Click(object sender, EventArgs e)
         {
-            //FrmButacas but = new FrmButacas();
-            //but.Show();
+            //unir formulario
+
             OcultarSubMenu();
         }
 
@@ -116,8 +95,9 @@ namespace ProyectoCine.Vistas
 
         private void btnPeliculas_Click(object sender, EventArgs e)
         {
-            //FrmMensaje mens = new FrmMensaje();
-            //mens.Show();
+            
+            FrmPeliculas pel = new FrmPeliculas();
+            pel.Show();
 
             OcultarSubMenu();
         }
@@ -130,8 +110,8 @@ namespace ProyectoCine.Vistas
 
         private void btnFunciones_Click(object sender, EventArgs e)
         {
-            FrmFunciones func = new FrmFunciones();
-            func.Show();
+            FrmFunciones fun = new FrmFunciones();
+            fun.Show();
 
             OcultarSubMenu();
         }
@@ -141,16 +121,38 @@ namespace ProyectoCine.Vistas
         private void btnAcercaDe_Click(object sender, EventArgs e)
         {
             MostrarSubMenu(panelAcercaDe);
-            
+
         }
 
         private void btnIntegrantes_Click(object sender, EventArgs e)
         {
-            //unir formulario
-            OcultarSubMenu();
+
             FrmAcercaDe acer = new FrmAcercaDe();
             acer.Show();
+            OcultarSubMenu();
         }
+
+        private void picCerrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Esta seguro que desea salir del programa?", "Cerrar sesion", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void reloj_Tick(object sender, EventArgs e)
+        {
+            cont++;
+            cont2++;
+            lblHora.Text = DateTime.Now.ToLongTimeString();
+            lblDate.Text = DateTime.Now.ToString("dddd MMMM yyyy");
+            if (cont == 600)
+            {
+                Pic.Visible = true;
+            }
+        }
+
+   
 
         private void picMinim_Click(object sender, EventArgs e)
         {
@@ -160,9 +162,10 @@ namespace ProyectoCine.Vistas
                 WindowState = FormWindowState.Minimized;
         }
 
-        private void btnPeliculas_Click_1(object sender, EventArgs e)
-        {
-
-        }
+        //private void btnTransaccion_Click_1(object sender, EventArgs e)
+        //{
+        //    FrmPeliculas pel = new FrmPeliculas();
+        //    pel.Show();
+        //}
     }
 }

@@ -15,7 +15,7 @@ namespace ProyectoCine.Vistas
 {
     public partial class FrmFunciones : Form
     {
-        private Venta nuevaVenta;
+       // private Venta nuevaVenta;
         private List<Funcion> lFunciones;
         private IFuncionDao servicio = null;
         public FrmFunciones()
@@ -78,6 +78,11 @@ namespace ProyectoCine.Vistas
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void picCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
